@@ -1,0 +1,33 @@
+<p>style-binding works!</p>
+<button 
+    [style.color] = "isValid ? 'green' : 'red'"
+    (click)="isValid = !isValid">
+    Color would be Green or Red condicionally
+</button>
+<hr>
+<div
+    [style.background-color] = "'yellow'">
+    Background color would be yellow
+</div>
+<hr>
+<div
+    [style.background-color] = "'red'"
+    [style.font-weight] = "'bold'">
+    Background color would be red
+    And Font weight would be bold
+</div>
+<hr>
+<div
+    [style.fontSize.%] = "'750'">
+    Font Size in %
+</div>
+<hr>
+<div
+    [style.fontSize.px] = "'7.5'">
+    Font Size in px
+</div>
+<hr>
+<div
+    [style.fontSize.em] = "'14'">
+    Font Size in em
+</div>

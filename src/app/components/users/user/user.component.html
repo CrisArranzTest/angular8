@@ -1,0 +1,21 @@
+<div class="styled">
+    <p>El del curso no tiene ni idea de explicar</p>
+    <div 
+        [@openClose]="isOpen ? 'open' : 'closed'"
+        class="open-close-container"
+        (click)='toggle()'>
+        <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let user of users"><a routerLink="./{{user.id}}">{{user.name}}</a></li>        
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
